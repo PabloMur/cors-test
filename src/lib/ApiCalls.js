@@ -1,5 +1,5 @@
 import axios from "axios";
-const callURL = "https://s11-c21-backend.vercel.app/";
+const callURL = "http://localhost:3001/api/";
 
 export const APICreateUser = async (email, name) => {
   try {
