@@ -1,13 +1,15 @@
 import axios from "axios";
-const callURL = "https://s11-c21-backend.vercel.app/";
+const callURL = "https://nearby-back.vercel.app/api/";
 
-export const APICreateUser = async (email, name) => {
+export const APICreateUser = async (email, name, phone, password) => {
   try {
     const response = await axios.post(
-      callURL + "user/create",
+      callURL + "user/createUser",
       {
         email,
         name,
+        phone,
+        password,
       },
       {
         headers: {
