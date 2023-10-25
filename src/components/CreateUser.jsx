@@ -21,6 +21,7 @@ export default function CreateUser() {
         <input type="email" name="email" id="" />
         <input type="phone" name="phone" id="" />
         <input type="password" name="password" id="" />
+        <div>Me la pela</div>
         <button>Create User</button>
       </form>
     </div>
