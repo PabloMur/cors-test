@@ -24,3 +24,24 @@ export const APICreateUser = async (email, name, phone, password) => {
     console.error(error);
   }
 };
+
+export const APIUpadateUser = async (userID, updateData) => {
+  try {
+    const response = await axios.put(
+      callURL + "user/" + userID,
+      {
+        updateData,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
