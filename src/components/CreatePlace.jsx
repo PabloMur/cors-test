@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import FileUploader from "./imageUploader";
+import FileUploader from "./ImageUploader";
 import { APICreatePlace } from "@/lib/ApiCalls";
 export default function PlaceCreatorDosmilByPABLOandLAURA() {
   const [imagesUrl, setImagesUrl] = useState("");
