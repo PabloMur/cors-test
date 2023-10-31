@@ -1,5 +1,5 @@
 import axios from "axios";
-const callURL = "https://nearby-back.vercel.app/api/";
+const callURL = "http://localhost:3000/api/";
 
 export const APICreateUser = async (email, name, phone, password) => {
   try {
@@ -40,6 +40,23 @@ export const APIUpadateUser = async (userID, updateData) => {
     );
 
     console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const APICreatePlace = async (place) => {
+  try {
+    console.log(place, " LUGARES ");
+    const response = await axios.post(callURL + "place/createPlace", place, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    console.log(response.data);
+
     return response.data;
   } catch (error) {
     console.error(error);
