@@ -1,5 +1,5 @@
 import axios from "axios";
-const callURL = "http://localhost:3000/api/";
+const callURL = "https://nearby-back.vercel.app/api/";
 
 export const APICreateUser = async (email, name, phone, password) => {
   try {
